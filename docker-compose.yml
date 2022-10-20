@@ -1,0 +1,10 @@
+version: "2.2"
+
+services:
+  python:
+    # https://jupyter-docker-stacks.readthedocs.io/en/latest/using/selecting.html#jupyter-base-notebook
+    image: jupyter/base-notebook:python-3.10
+    volumes:
+      - /vagrant:/vagrant
+    ports:
+      - "8888:8888"
