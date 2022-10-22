@@ -71,6 +71,7 @@ vagrant plugin list | grep "vagrant-docker-compose"
 ```
 
 ## Steps to execute
+
 All the `vagrant` commands must be executed in the host machine from the folder
 that contains the Vagrantfile (in this case, the project root folder).
 
@@ -86,6 +87,7 @@ vagrant up
 ```
 
 ### 2. Check the status of the VM [host]
+
 ```bash
 vagrant status
 ```
@@ -221,6 +223,7 @@ in the Vagrantfile (defaults to `1.24.1`), in the `config.vm.provision :docker_c
 ## Jupyter project
 
 ### IPython
+
 Enhanced interactive Python shell.
 
 * Documentation: https://ipython.readthedocs.io/en/stable/
@@ -229,6 +232,7 @@ Enhanced interactive Python shell.
 * Execution: `ipython`
 
 ### JupyterLab
+
 The latest web-based interactive development environment.
 
 * Documentation: https://jupyterlab.readthedocs.io/en/stable/
@@ -237,6 +241,7 @@ The latest web-based interactive development environment.
 * Execution: `jupyter lab`
 
 ### Jupyter Notebook
+
 The original web application for creating and sharing computational documents.
 
 * Documentation: https://jupyter-notebook.readthedocs.io/en/stable/
@@ -245,6 +250,7 @@ The original web application for creating and sharing computational documents.
 * Execution: `jupyter notebook`
 
 ### Voilà
+
 Runs the code in the Jupyter notebooks and transforms them to standalone web applications and dashboards.
 
 * Documentation: https://voila.readthedocs.io/en/stable/index.html
@@ -255,6 +261,7 @@ Runs the code in the Jupyter notebooks and transforms them to standalone web app
   - For example, if you typed jupyter lab and it was running at http://localhost:8888/lab, then Voilà would be accessed at http://localhost:8888/voila.
 
 ## References
+
 * [Vagrant](https://www.vagrantup.com/)
 * [Docker](https://www.docker.com/)
 * [Vagrant Docker provisioner](https://www.vagrantup.com/docs/provisioning/docker)
