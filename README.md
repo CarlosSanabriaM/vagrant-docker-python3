@@ -1,6 +1,6 @@
 # Vagrant Docker Python3
 
-Project that __automates the creation of a `Python 3.10 + Jupyter` local environment__, ment to be used for __learning and testing__ purposes.
+Project that __automates the creation of a `Python 3.10 + Jupyter` local environment__, meant to be used for __learning and testing__ purposes.
 
 Python3 + Jupyter are installed and executed __inside a [Docker](https://www.docker.com/) container, inside a VM,
 using [Vagrant](https://www.vagrantup.com/) + [Docker-Compose](https://docs.docker.com/compose/)__.
