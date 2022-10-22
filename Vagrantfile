@@ -6,7 +6,7 @@
 
 ### Configuration parameters ###
 # Virtual machine name
-VM_NAME = "vm_docker_python_3"
+VM_NAME = "vagrant-docker-python3"
 # Virtual machine memory (MB)
 VM_MEMORY_MB = "2048"
 ################################
@@ -17,6 +17,8 @@ Vagrant.configure("2") do |config|
   config.vm.box = "hashicorp/bionic64"
   # This is the name vagrant outputs on the console and logs.
   config.vm.define VM_NAME
+  # This is the hostname inside the VM.
+  config.vm.hostname = VM_NAME
 
   # Create a forwarded port mapping which allows access to a specific port
   # within the machine from a port on the host machine.
