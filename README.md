@@ -32,6 +32,34 @@ The following diagram shows the architecture:
   vagrant plugin install vagrant-docker-compose
   ```
 
+### Verify installation
+
+Check that the `vagrant` executable was added correctly to the `PATH` variable:
+```bash
+vagrant version
+```
+
+Check that vagrant is able to create a VM:
+```bash
+mkdir test-vagrant
+cd test-vagrant
+vagrant init
+vagrant up
+```
+
+> ⚠️ If the following error appears after executing `vagrant up`:  
+> __`No usable default provider could be found for your system.`__
+> 1. Verify that VirtualBox was installed correctly
+> 2. Obtain more info about the error:
+>    ```
+>    vagrant up --provider=virtualbox
+>    ```
+
+Check that the `vagrant-docker-compose` plugin was installed correctly:
+```bash
+vagrant plugin list | grep "vagrant-docker-compose"
+```
+
 ## Steps to execute
 All the `vagrant` commands must be executed in the host machine from the folder
 that contains the Vagrantfile (in this case, the project root folder).
