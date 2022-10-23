@@ -127,11 +127,11 @@ The VM welcome message shows the command for connecting to the tmux session.
 The tmux window is divided in panes with the following layout:
 
 ```
-----------------------------------------------
-|    LINUX CLI    |                          |
-|---------------- | IPYTHON 3.10 INTERPRETER |
-| JUPYTER-LAB URL |                          |
-----------------------------------------------
+┌─────────────────┬──────────────────────────┐
+│    LINUX CLI    │                          │
+├─────────────────┤ IPYTHON 3.10 INTERPRETER │
+│ JUPYTER-LAB URL │                          │
+└─────────────────┴──────────────────────────┘
 ```
 
 ### 5. Access JupyterLab in your web browser [host]
