@@ -185,7 +185,7 @@ Execute the bash command in that container to connect to it:
 docker exec -it <container-name> bash
 ```
 
-### Stop the VM (keeps data)
+### Stop the VM (keeps data) [host]
 
 Stopping the VM will stop the Docker containers and turn off the VM.  
 All the data is persisted inside the containers, and a subsequent turn on of the VM
@@ -206,7 +206,7 @@ Start the VM and the containers again:
 vagrant up
 ```
 
-### Destroy the VM (removes data)
+### Destroy the VM (removes data) [host]
 
 Destroying the VM will remove all the VM data, and therefore, the containers inside it.
 
