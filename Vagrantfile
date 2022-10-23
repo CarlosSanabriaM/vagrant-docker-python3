@@ -39,5 +39,8 @@ Vagrant.configure("2") do |config|
   # Execute tmux shell script
   config.vm.provision "shell", path: "scripts/vagrant/tmux.sh"
   config.vm.provision "shell", path: "scripts/vagrant/motd.sh", run: "always"
+  
+  # Automatically chdir to /vagrant directory upon `vagrant ssh`
+  config.ssh.extra_args = ["-t", "cd /vagrant; bash --login"] # warn: this breaks the ability to use the `vagrant ssh -- <command>` option
 
 end
