@@ -9,6 +9,10 @@ $ tmux attach -t python"
 # Log message
 echo "Configure MOTD"
 
+# Suppress `dpkg-preconfigure` warning related to stdin for `apt-get install`
+#  https://serverfault.com/a/670688
+export DEBIAN_FRONTEND=noninteractive
+
 # Update package manager and install packages
 #sudo apt-get update
 apt-get install -y cowsay
