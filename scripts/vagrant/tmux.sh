@@ -10,9 +10,6 @@ TMUX_SESSION_NAME="python"
 TMUX_SESSION_CONFIGURATION_FILE="${TMUX_SESSIONS_CONFIGURATION_DIR}/${TMUX_SESSION_NAME}"
 #endregion
 
-# Log message
-echo "Configure tmux"
-
 # Create tmux configuration file
 cat <<EOF > $TMUX_CONFIGURATION_FILE
 source-file $TMUX_SESSION_CONFIGURATION_FILE
@@ -47,6 +44,3 @@ send-keys "docker logs vagrant_python_1 2>&1 | grep -o '[^ ]*127.0.0.1[^ ]*' | t
 select-pane -t right
 EOF
 #endregion
-
-# Log message
-echo "Configured tmux"
