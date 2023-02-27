@@ -37,9 +37,10 @@ Vagrant.configure("2") do |config|
   config.vm.provision :docker
   config.vm.provision :docker_compose, yml: "/vagrant/docker-compose.yml", run: "always"
   # Execute configuration shell scripts
-  config.vm.provision "shell", path: "scripts/vagrant/install-docker-extensions.sh"
-  config.vm.provision "shell", path: "scripts/vagrant/tmux.sh"
-  config.vm.provision "shell", path: "scripts/vagrant/motd.sh", run: "always"
+  config.vm.provision "shell", name: "Install Docker extensions", path: "scripts/vagrant/install-docker-extensions.sh"
+  config.vm.provision "shell", name: "Configure tmux",            path: "scripts/vagrant/tmux.sh"
+  config.vm.provision "shell", name: "Configure motd",            path: "scripts/vagrant/motd.sh", run: "always"
+
   
   # Automatically chdir to /vagrant directory upon `vagrant ssh`
   config.ssh.extra_args = ["-t", "cd /vagrant; bash --login"] # warn: this breaks the ability to use the `vagrant ssh -- <command>` option
