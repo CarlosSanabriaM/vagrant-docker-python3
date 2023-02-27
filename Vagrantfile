@@ -37,6 +37,7 @@ Vagrant.configure("2") do |config|
   config.vm.provision :docker
   config.vm.provision :docker_compose, yml: "/vagrant/docker-compose.yml", run: "always"
   # Execute configuration shell scripts
+  config.vm.provision "shell", name: "Create bash aliases file",  path: "scripts/vagrant/create-bash-aliases-file.sh"
   config.vm.provision "shell", name: "Install Docker extensions", path: "scripts/vagrant/install-docker-extensions.sh"
   config.vm.provision "shell", name: "Configure tmux",            path: "scripts/vagrant/tmux.sh"
   config.vm.provision "shell", name: "Configure motd",            path: "scripts/vagrant/motd.sh", run: "always"
