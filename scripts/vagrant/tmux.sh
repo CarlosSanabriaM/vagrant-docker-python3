@@ -24,7 +24,7 @@ cat <<EOF > $TMUX_SESSION_CONFIGURATION_FILE
 new-session -s $TMUX_SESSION_NAME
 
 # Split window horizontally (in 2 panes: 0 | 1) and execute command in the right pane
-split-window -h "docker exec -it vagrant_python_1 ipython"
+split-window -h "docker exec -it vagrant-python-1 ipython"
 
 # Select left pane
 select-pane -t left
@@ -38,7 +38,7 @@ split-window -v
 
 # TODO: Try to fix this to not show the command (show only the output)
 # Execute commands in the bottom pane
-send-keys "docker logs vagrant_python_1 2>&1 | grep -o '[^ ]*127.0.0.1[^ ]*' | tail -n 1 | xargs -i printf '\n\n\n\nJupyterLab URL:\n{}\n\n\n\n\n'" Enter
+send-keys "docker logs vagrant-python-1 2>&1 | grep -o '[^ ]*127.0.0.1[^ ]*' | tail -n 1 | xargs -i printf '\n\n\n\nJupyterLab URL:\n{}\n\n\n\n\n'" Enter
 
 # Select right pane
 select-pane -t right
