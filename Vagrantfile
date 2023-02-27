@@ -36,7 +36,8 @@ Vagrant.configure("2") do |config|
   # Enable provisioning with Docker and Docker Compose.
   config.vm.provision :docker
   config.vm.provision :docker_compose, yml: "/vagrant/docker-compose.yml", run: "always"
-  # Execute tmux shell script
+  # Execute configuration shell scripts
+  config.vm.provision "shell", path: "scripts/vagrant/install-docker-extensions.sh"
   config.vm.provision "shell", path: "scripts/vagrant/tmux.sh"
   config.vm.provision "shell", path: "scripts/vagrant/motd.sh", run: "always"
   
