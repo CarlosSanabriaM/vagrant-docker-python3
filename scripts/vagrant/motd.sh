@@ -12,6 +12,7 @@ export DEBIAN_FRONTEND=noninteractive
 
 # Install packages
 apt-get install -y cowsay
+apt-get install -y lolcat
 apt-get install -y figlet
 
 # Randomly choose a cowfile to be used with `cowsay`
