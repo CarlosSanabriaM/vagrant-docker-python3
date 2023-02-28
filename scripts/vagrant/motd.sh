@@ -10,8 +10,7 @@ $ tmux attach -t python"
 #  https://serverfault.com/a/670688
 export DEBIAN_FRONTEND=noninteractive
 
-# Update package manager and install packages
-#sudo apt-get update
+# Install packages
 apt-get install -y cowsay
 apt-get install -y figlet
 
