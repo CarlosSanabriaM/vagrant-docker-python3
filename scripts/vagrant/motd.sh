@@ -31,7 +31,7 @@ figlet -t "$MOTD_FIGLET_HEADER" | # print header using `figlet`
 #  Tmux commands for attaching to sessions created with `cowsay`
 echo "$MOTD_TMUX_COMMANDS" |
   cowsay -n -f "$cowfile" | # print message using `cowsay` and the randomly selected cowfile
-  perl -pe 's/\$ ([^>|\/\\]+)/\e[1;35m\$ \e[1;36m$1\e[0m/' >> /etc/motd # use regex to add coloring to tmux command
+  perl -pe 's/\$ ([^>|\/\\]+)/\e[1;35m\$ \e[1;36m$1\e[0m/' >> /etc/motd # use regex to add coloring to tmux command (https://regex101.com/r/zy9w1L/1)
 
 # Log message
 echo "Message Of The Day (MOTD) updated with cowfile: $cowfile"
