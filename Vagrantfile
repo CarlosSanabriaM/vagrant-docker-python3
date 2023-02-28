@@ -22,6 +22,7 @@ Vagrant.configure("2") do |config|
 
   # Create a forwarded port mapping which allows access to a specific port
   # within the machine from a port on the host machine.
+  #config.vm.network "forwarded_port", guest: XXXX, host: XXXX
   config.vm.network "forwarded_port", guest: 8888, host: 8888
 
   # Provider-specific configuration so you can fine-tune various

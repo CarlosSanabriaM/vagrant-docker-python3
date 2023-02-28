@@ -11,6 +11,8 @@ Python3 + Jupyter are installed and executed __inside a Docker container, inside
 
 > With this, __you don't need to install Docker or Python__ on your local computer.  
 > __You just need to install Vagrant and VirtualBox__.
+>
+> All the images and containers are created in an __isolated environment__ that can be deleted at any time.
 
 ## Architecture
 
@@ -153,6 +155,13 @@ The tmux window is divided in panes with the following layout:
 The URL for accesing JupyterLab will be shown in the `JUPYTER-LAB URL` pane of the tmux session.
 
 Simply copy that URL and paste it in your web browser.
+
+> __ℹ️ Note:__
+>
+> It can also be obtained executing the following command:
+> ```bash
+> docker logs vagrant-python-1 2>&1 | grep -o '[^ ]*127.0.0.1[^ ]*'
+> ```
 
 ### (Optional) Detach from tmux session [vm]
 
