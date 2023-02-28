@@ -26,12 +26,13 @@ cowfilesArrayRandomIndex=$(shuf -i 0-$cowfilesArrayLastIndex -n 1)
 cowfile=${COWFILES_ARRAY[$cowfilesArrayRandomIndex]}
 echo "$cowfile"
 
+# Create a message of the day that will be displayed on login, storing it in /etc/motd
 #  Welcome banner created with `figlet` and `lolcat`
 figlet -t "$MOTD_FIGLET_HEADER" | # print header using `figlet`
-  lolcat --spread 1.5 --force > /etc/motd # add rainbow coloring
+  /usr/games/lolcat --spread 1.5 --force > /etc/motd # add rainbow coloring
 #  Tmux commands for attaching to sessions created with `cowsay`
 echo "$MOTD_TMUX_COMMANDS" |
-  cowsay -n -f "$cowfile" | # print message using `cowsay` and the randomly selected cowfile
+  /usr/games/cowsay -n -f "$cowfile" | # print message using `cowsay` and the randomly selected cowfile
   perl -pe 's/\$ ([^>|\/\\]+)/\e[1;35m\$ \e[1;36m$1\e[0m/' >> /etc/motd # use regex to add coloring to tmux command (https://regex101.com/r/zy9w1L/1)
 
 # Log message
