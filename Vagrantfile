@@ -15,6 +15,7 @@ Vagrant.configure("2") do |config|
 
   # Every Vagrant development environment requires a box.
   config.vm.box = "hashicorp/bionic64"
+  #config.vm.box = "ubuntu/jammy64" # Use this box if the other one fails
   # This is the name vagrant outputs on the console and logs.
   config.vm.define VM_NAME
   # This is the hostname inside the VM.
