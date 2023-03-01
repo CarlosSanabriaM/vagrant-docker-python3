@@ -76,6 +76,15 @@ rm -rf test-vagrant
 >
 > * Reinstall VirtualBox
 
+> ⚠️ If Vagrant gets stuck on the following line after executing `vagrant up`:  
+> __`SSH auth method: private key`__
+>
+> * Windows users: Open cmd as admin and execute:
+>    ```
+>    bcdedit /set hypervisorlaunchtype off
+>    ```
+>   This disables [Hyper-V](https://es.wikipedia.org/wiki/Hyper-V).
+
 > ⚠️ For __other issues__:
 >
 > * Visit the [VirtualBox Common Issues](https://developer.hashicorp.com/vagrant/docs/providers/virtualbox/common-issues) section of the Vagrant documentation
