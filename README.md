@@ -52,7 +52,7 @@ Check that vagrant is able to create a VM:
 ```bash
 mkdir test-vagrant
 cd test-vagrant
-vagrant init hashicorp/bionic64
+vagrant init ubuntu/jammy64
 vagrant up
 vagrant ssh
 pwd
