@@ -31,7 +31,7 @@ Vagrant.configure("2") do |config|
   config.vm.provider "virtualbox" do |vb|
     # This is the name VirtualBox uses for the VM.
     vb.name = VM_NAME
-    # Set 2GB of RAM for the VM.
+    # Set RAM for the VM.
     vb.memory = VM_MEMORY_MB
   end
 
